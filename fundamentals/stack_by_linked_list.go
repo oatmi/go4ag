@@ -1,10 +1,5 @@
 package fundamentals
 
-type node[T Item] struct {
-	item T
-	next *node[T]
-}
-
 type stackByLinkedList[T Item] struct {
 	first  *node[T]
 	length int // not thread safe
