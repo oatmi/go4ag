@@ -20,6 +20,15 @@ func (s *stack[T]) Pop() T {
 	return t
 }
 
+// Peak return the most recently insterted item
+func (s *stack[T]) Peak() *T {
+	if s.IsEmpty() {
+		return nil
+	}
+	t := s.data[0]
+	return &t
+}
+
 func (s *stack[T]) IsEmpty() bool {
 	return len(s.data) == 0
 }
